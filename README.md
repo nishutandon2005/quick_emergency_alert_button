@@ -290,18 +290,6 @@ urg -dir cov_dir -report both
 4. Update documentation with design changes
 5. Maintain 100% coverage for critical paths
 
-## 📄 License
-
-MIT License - See LICENSE file for details
-
-## 👥 Team & Contact
-
-- **Lead RTL Designer**: [Name]
-- **Physical Design**: [Name]
-- **Verification**: [Name]
-- **Email**: project@example.com
-
----
 
 **Last Updated**: December 2025  
 **PDK Version**: 65nm/180nm Technology  
