@@ -1,0 +1,218 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO emergency_alert_top
+  CLASS BLOCK ;
+  FOREIGN emergency_alert_top ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 166.605 BY 177.325 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 27.455 10.640 29.055 166.160 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 66.325 10.640 67.925 166.160 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 105.195 10.640 106.795 166.160 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 144.065 10.640 145.665 166.160 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 32.760 161.240 34.360 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 71.520 161.240 73.120 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 110.280 161.240 111.880 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 149.040 161.240 150.640 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 24.155 10.640 25.755 166.160 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 63.025 10.640 64.625 166.160 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 101.895 10.640 103.495 166.160 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 140.765 10.640 142.365 166.160 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 29.460 161.240 31.060 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 68.220 161.240 69.820 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 106.980 161.240 108.580 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 145.740 161.240 147.340 ;
+    END
+  END VPWR
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.852000 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 125.840 4.000 126.440 ;
+    END
+  END clk
+  PIN emergency_btn
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 162.605 13.640 166.605 14.240 ;
+    END
+  END emergency_btn
+  PIN led_emergency
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END led_emergency
+  PIN led_gps_valid
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 135.330 173.325 135.610 177.325 ;
+    END
+  END led_gps_valid
+  PIN led_ready
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 119.230 0.000 119.510 4.000 ;
+    END
+  END led_ready
+  PIN rst_n
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 61.240 4.000 61.840 ;
+    END
+  END rst_n
+  PIN state_debug[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met3 ;
+        RECT 162.605 142.840 166.605 143.440 ;
+    END
+  END state_debug[0]
+  PIN state_debug[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 58.050 0.000 58.330 4.000 ;
+    END
+  END state_debug[1]
+  PIN state_debug[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 12.970 173.325 13.250 177.325 ;
+    END
+  END state_debug[2]
+  PIN uart_rx_gps
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 74.150 173.325 74.430 177.325 ;
+    END
+  END uart_rx_gps
+  PIN uart_tx_gsm
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met3 ;
+        RECT 162.605 78.240 166.605 78.840 ;
+    END
+  END uart_tx_gsm
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 161.000 166.005 ;
+      LAYER met1 ;
+        RECT 0.070 10.640 161.390 166.160 ;
+      LAYER met2 ;
+        RECT 0.100 173.045 12.690 173.325 ;
+        RECT 13.530 173.045 73.870 173.325 ;
+        RECT 74.710 173.045 135.050 173.325 ;
+        RECT 135.890 173.045 161.370 173.325 ;
+        RECT 0.100 4.280 161.370 173.045 ;
+        RECT 0.650 4.000 57.770 4.280 ;
+        RECT 58.610 4.000 118.950 4.280 ;
+        RECT 119.790 4.000 161.370 4.280 ;
+      LAYER met3 ;
+        RECT 4.000 143.840 162.605 166.085 ;
+        RECT 4.000 142.440 162.205 143.840 ;
+        RECT 4.000 126.840 162.605 142.440 ;
+        RECT 4.400 125.440 162.605 126.840 ;
+        RECT 4.000 79.240 162.605 125.440 ;
+        RECT 4.000 77.840 162.205 79.240 ;
+        RECT 4.000 62.240 162.605 77.840 ;
+        RECT 4.400 60.840 162.605 62.240 ;
+        RECT 4.000 14.640 162.605 60.840 ;
+        RECT 4.000 13.240 162.205 14.640 ;
+        RECT 4.000 10.715 162.605 13.240 ;
+      LAYER met4 ;
+        RECT 16.855 19.895 23.755 126.305 ;
+        RECT 26.155 19.895 27.055 126.305 ;
+        RECT 29.455 19.895 62.625 126.305 ;
+        RECT 65.025 19.895 65.925 126.305 ;
+        RECT 68.325 19.895 101.495 126.305 ;
+        RECT 103.895 19.895 104.795 126.305 ;
+        RECT 107.195 19.895 129.425 126.305 ;
+  END
+END emergency_alert_top
+END LIBRARY
+
