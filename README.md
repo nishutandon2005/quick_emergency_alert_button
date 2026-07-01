@@ -114,48 +114,6 @@ Static Timing Analysis (STA) → Design Rule Check (DRC)
 Layout → Stream Export → GDS II Format (mask layout)
 ```
 
-## 📂 Directory Structure
-
-```
-emergency-alert-system/
-├── rtl/                        # Verilog HDL modules
-│   ├── button_detector.v
-│   ├── fsm_controller.v
-│   ├── uart_core.v
-│   ├── gps_parser.v
-│   ├── message_trigger.v
-│   ├── power_manager.v
-│   └── top_module.v
-├── sim/                        # Simulation files
-│   ├── tb_button_detector.v
-│   ├── tb_fsm.v
-│   ├── tb_uart.v
-│   └── testbench.sv
-├── syn/                        # Synthesis scripts
-│   ├── yosys_script.ys         # Yosys synthesis
-│   ├── synopsys_dc.tcl         # Design Compiler script
-│   └── constraints.sdc         # Synopsys Design Constraints
-├── pnr/                        # Place & Route
-│   ├── openroad_script.tcl
-│   ├── innovus_config.conf
-│   └── pdn_config.cfg
-├── drc_lvs/                    # Design verification
-│   ├── drc_rules.txt
-│   ├── lvs_script.py
-│   └── sram_macro_definitions.lef
-├── lib/                        # Cell libraries & PDK
-│   ├── 65nm_pdk/
-│   ├── liberty_files/
-│   └── technology.lef
-├── gds/                        # Final GDS output
-│   ├── top_layout.gds
-│   └── compressed.gz
-├── doc/                        # Documentation
-│   ├── datasheet.pdf
-│   ├── protocol_spec.md
-│   └── timing_report.txt
-└── README.md
-```
 
 ## 🚀 Quick Start
 
